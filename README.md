@@ -20,7 +20,7 @@ it via:
 <code># docker run -it waterguru-api /bin/bash</code> and then poke around and
 
 # Usage
-You'll need to get the IP address of your docker host, then navigate to: <i>http://your.ip.address:53255/api/wg></i> - this should show you json output from WaterGuru
+You'll need to get the IP address of your docker host, then navigate to: <i>http://your.ip.address:53255/api/wg</i> - this should show you json output from WaterGuru
 
 # Hubitat
 Coming Soon. 
