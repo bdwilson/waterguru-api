@@ -6,6 +6,8 @@ There is no authentication because the expectation is that you're running this o
 properly implement a token refresh option.</b> <i>(Hint, hint, please add this
 and send me a pull request)</i>
 
+If you dont own a WaterGuru, you can [save 30%](https://waterguru.refr.cc/brianw2) on a Sense 1 or 2 through May 2024. 
+
 # Installation (Docker)
 1. Grab the [Dockerfile](https://raw.githubusercontent.com/bdwilson/waterguru-api/master/Dockerfile) via wget and put it in a directory on your Docker server. Then run the commands
 below from that directory
