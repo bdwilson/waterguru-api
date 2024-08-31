@@ -1,8 +1,9 @@
-FROM python:3.9-slim-buster
+#!/bin/bash
+FROM amd64/python:3.9-slim-buster
 ENV TZ=America/New_York
+ENV WG_USER=''
+ENV WG_PASS=''
 
-ARG WG_USER
-ARG WG_PASS
 ARG WG_PORT=53255
 
 RUN mkdir /code
@@ -10,10 +11,8 @@ WORKDIR /code
 
 RUN apt-get update -y && \
     apt-get install -y gcc git && \
-    pip install requests_aws4auth boto3 flask warrant && \
-	git clone https://github.com/bdwilson/waterguru-api && \
-	sed -i "s/WG_USER/${WG_USER}/" /code/waterguru-api/waterguru_flask.py && \
-	sed -i "s/WG_PASS/${WG_PASS}/" /code/waterguru-api/waterguru_flask.py && \
+	git clone https://github.com/pysanders/waterguru-api && \
+    pip install -r /code/waterguru-api/requirements.txt && \
 	sed -i "s/WG_PORT/${WG_PORT}/" /code/waterguru-api/waterguru_flask.py && \
 	ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 

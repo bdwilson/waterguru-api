@@ -1,0 +1,6 @@
+requests_aws4auth
+boto3
+flask
+warrant
+Pyrebase4
+redis

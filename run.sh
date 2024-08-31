@@ -1,1 +1,1 @@
-docker run -d --restart unless-stopped -p 53255:53255 --name waterguru-api -t waterguru-api
+docker run -d --restart unless-stopped --env=REDIS=192.168.1.3 --env=XXX --env=WG_PASS=YYY -p 53255:53255 --name waterguru-api -t waterguru-api
